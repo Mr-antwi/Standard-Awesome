@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kranky&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Yuji+Mai&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul class="menu-links" id="dropdown">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#sign-in">Sign In</a></li>
+            <li><a href="#sign-out">Sign Up</a></li>
+            <li class="hamburger"><a href="javascript:void(0)" onclick="dropDownMenu()">&#9776;</a></li>
+        </ul>
+    </nav>
+    <section class="landing-page">
+        <div class="landing-container col-6">
+            <div class="form-container">
+                <div class="form-header left-corner">
+                    <h1>Crazy Radness</h1>
+                    <h1>made for developers</h1>
+                </div>
+                <form action="">
+                   <div class="left-corner">
+                    <p>
+                        <div class="label">
+                            <label for="username">Username</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="username" placeholder="Username">
+                        </div>
+                    </p>
+                    <p>
+                        <div class="label">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="input">
+                            <input type="password" id="password" placeholder="Password">
+                        </div>
+                    </p>
+                   </div>
+                </form>
+            </div>
+            <div class="landing-image col-6">
+                <div class="right-corner left-corner">
+                    <div class="video-container">
+                        <iframe width="450" height="250" src="https://www.youtube.com/embed/VoGU5ZJ8TZ0?si=jUYJozUlRin80GT1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+
+    <section id="news" class="news-head">
+        <h1>The Standard Of awesomeness</h1>
+        <div class="news-container">
+            <div class="news-card .col-4">
+                <div class="news-content">
+                    <i class="bi bi-discord"></i>
+                    <h3>Chat with me</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi dolorum natus culpa, dolorem hic repudiandae.</p>
+                </div>
+            </div>
+            <div class="news-card .col-4">
+                <div class="news-content">
+                    <i class="bi bi-code-square"></i>
+                    <h3>Learn to code</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi dolorum natus culpa, dolorem hic repudiandae.</p>
+                </div>
+            </div>
+            <div class="news-card .col-4">
+                <div class="news-content">
+                    <i class="bi bi-building-gear"></i>
+                    <h3>Build an Empire</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi dolorum natus culpa, dolorem hic repudiandae.</p>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <button><a href="#">Learn More</a></button>
+        </div>
+    </section>
+
+
+   <script>
+    function dropDownMenu(){
+        var x = document.getElementById("dropdown");
+        if(x.className === "menu-links"){
+            x.className += " responsive";
+        }
+        else{
+            x.className = "menu-links";
+        }
+    }
+   </script>
+</body>
+</html>
